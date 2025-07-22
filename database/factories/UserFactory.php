@@ -24,7 +24,7 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'phone' => $this->faker->phoneNumber(),
             'birth_date' => $this->faker->dateTimeBetween('-50 years', '-18 years'),
-            'password' => static::$password ??= Hash::make('password'),
+            'password' => Hash::make('4545'),
             'remember_token' => Str::random(10),
             'is_admin' => $this->faker->boolean(10), // 10% son admins
             'is_active' => true,
